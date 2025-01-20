@@ -31,42 +31,41 @@ project/
    - Create a `.vscode` folder in your project root
    - Create `tasks.json` inside `.vscode` with the following configuration:
 
-   ````json
-   {
-     "version": "2.0.0",
-     "presentation": {
-       "reveal": "always",
-       "panel": "new"
-     },
-     "tasks": [
-       {
-         "label": "Run Processing Sketch",
-         "command": "/usr/local/bin/processing-java",
-         "type": "process",
-         "args": ["--force", "--sketch=${fileDirname}", "--run"],
-         "problemMatcher": [],
-         "group": {
-           "kind": "build",
-           "isDefault": true
-         }
-       }
-     ]
-   }```
-   ````
+```json
+{
+  "version": "2.0.0",
+  "presentation": {
+    "reveal": "always",
+    "panel": "new"
+  },
+  "tasks": [
+    {
+      "label": "Run Processing Sketch",
+      "command": "/usr/local/bin/processing-java",
+      "type": "process",
+      "args": ["--force", "--sketch=${fileDirname}", "--run"],
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
+```
 
-3. Create Your Sketch
+3. **Create Your Sketch**
 
-Create a folder for your sketch
-Important: The .pde file must have the same name as its parent folder
-Example: sketch/sketch.pde
+   Create a folder for your sketch
+   Important: The .pde file must have the same name as its parent folder
+   Example: sketch/sketch.pde
 
 ## Running Your Sketch
 
 Open your .pde file in VSCode
 Run the task using:
 
-Command Palette (Cmd + Shift + P): Tasks: Run Build Task
-Or use the keyboard shortcut: Cmd + Shift + B
+Use the keyboard shortcut: Cmd + Shift + B or command Palette (Cmd + Shift + P): Tasks: Run Build Task
 
 ## Example Sketch
 
